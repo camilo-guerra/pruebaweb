@@ -3,27 +3,27 @@ const imagenesLight = document.querySelector('.agregar-imagen');
 const contenedorLight = document.querySelector('.image-light');
 const hamburger1 = document.querySelector('.hamburger');
 
-imagenes.forEach( imagen => {
-    imagen.addEventListener('click', ()=>{
-   aparecerimagen(imagen.getAttribute('src'));
-        
+imagenes.forEach(imagen => {
+    imagen.addEventListener('click', () => {
+        aparecerimagen(imagen.getAttribute('src'));
+
 
     })
-} )
+})
 
-contenedorLight.addEventListener('click',(e)=>{
+contenedorLight.addEventListener('click', (e) => {
 
-if(e.target !== imagenesLight){
-    contenedorLight.classList.toggle('show');
-    imagenesLight.classList.toggle('showImage');
-    hamburger1.style.opacity = '1';
-}
+    if (e.target !== imagenesLight) {
+        contenedorLight.classList.toggle('show');
+        imagenesLight.classList.toggle('showImage');
+        hamburger1.style.opacity = '1';
+    }
 });
 
-const aparecerimagen  = (imagen) => {
+const aparecerimagen = (imagen) => {
 
     imagenesLight.src = imagen;
     contenedorLight.classList.toggle('show');
     imagenesLight.classList.toggle('showImage');
     hamburger1.style.opacity = '0';
-} 
+}

@@ -4,15 +4,15 @@ const menu = document.querySelector('.menu-navegation');
 console.log(menu);
 console.log(hamburger);
 
-hamburger.addEventListener('click',() => {
+hamburger.addEventListener('click', () => {
 
     menu.classList.toggle("spread");
-    
+
 });
 
-window.addEventListener('click',e => {
-if(menu.classList.contains('spread') && e.target !== menu && e.target!=hamburger){
+window.addEventListener('click', e => {
+    if (menu.classList.contains('spread') && e.target !== menu && e.target != hamburger) {
 
-    menu.classList.toggle("spread");
-}
+        menu.classList.toggle("spread");
+    }
 });
